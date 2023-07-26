@@ -1,0 +1,35 @@
+/* colaboracion.css */
+/* Estilo para el mosaico de textos colaborativos */
+#mosaico-textos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.texto-colaborativo {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* Estilo para el texto seleccionado en edición */
+#texto-seleccionado {
+  border: 1px solid #e68a8a;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ff9292; /* Cambiar el color de fondo para el texto seleccionado */
+}
+
+/* Estilo para el conector */
+.conector {
+  color: #eb1d1d; /* Color del conector */
+  font-weight: bold; /* Opcional: resaltar el conector */
+  margin: 0 5px; /* Espacio alrededor del conector */
+}
+
+/* Estilo para los campos de entrada de texto */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}

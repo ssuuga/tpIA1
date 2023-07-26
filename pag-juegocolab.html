@@ -1,0 +1,43 @@
+<!-- colaboracion.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>An Attic Corner - Juego de Texto Colaborativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="colaboracion.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>An Attic Corner</h1>
+        <nav>
+            <a href="pag-principal.html">Inicio</a>
+            <a href="#recomendaciones">Recomendaciones</a>
+            <a href="pag-juegocolab.html">Colaboración con Usuarios</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="colaboracion">
+            <h2>Texto Colaborativo</h2>
+            <div id="texto-seleccionado"></div> <!-- Nueva sección para mostrar el texto seleccionado -->
+            <p>Escribe una frase que inicie la historia:</p>
+            <textarea id="input-frase" placeholder="Escribe aquí..."></textarea>
+            <p>Escribe el conector para continuar la historia:</p>
+            <textarea id="input-conector" placeholder="Escribe aquí el conector..."></textarea>
+            <button id="btn-enviar">Enviar</button>
+            <div id="mosaico-textos">
+                <!-- Aquí se mostrarán los textos colaborativos en un mosaico -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 An Attic Corner. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
