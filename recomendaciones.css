@@ -1,0 +1,36 @@
+/* Agrega aquí los estilos que desees para la página de recomendaciones */
+/* Por ejemplo, estilos para el encabezado, la navegación y el pie de página */
+
+/* Estilos para los mosaicos de playlist */
+#mosaico-recomendaciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.mosaico-item {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #291d1d;
+}
+
+.mosaico-item .galeria-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 25px;
+}
+
+.mosaico-item .galeria-imagenes img {
+  width: 500px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.mosaico-item h3 {
+  margin-top: 20px;
+}
+
+/* Otros estilos para personalizar la apariencia de la página de recomendaciones */

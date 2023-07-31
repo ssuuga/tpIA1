@@ -1,33 +1,54 @@
-<!-- colaboracion.html -->
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>An Attic Corner - Juego de Texto Colaborativo</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- TIPOGRAFÍAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Rubik:wght@500;600;900&display=swap"
+        rel="stylesheet">
+    <!--             -->
+    
     <link rel="stylesheet" href="colaboracion.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="script.js"></script>
-
 </head>
+
 <body>
     <header>
         <h1>An Attic Corner</h1>
         <nav>
-            <a href="pag-principal.html">Inicio</a>
-            <a href="#recomendaciones">Recomendaciones</a>
+            <a href="index.html">Inicio</a>
+            <a href="recomendaciones.html">Recomendaciones</a>
             <a href="pag-juegocolab.html">Colaboración con Usuarios</a>
         </nav>
     </header>
-    
+
     <main>
+        <!-- Aquí va el texto descriptivo sobre la temática del "cádaver exquisito" -->
+        <section id="descripcion-juego">
+            <h2>¡Cadáver Exquisito - Juego de Texto Colaborativo!</h2>
+            <p>El "Cadáver Exquisito" es un juego de escritura colaborativa en el que los participantes contribuyen con
+                frases o fragmentos de texto para crear una historia conjunta. Cada participante solo puede ver el
+                fragmento previo al que ellos contribuyeron, lo que hace que la historia se desarrolle de manera
+                sorprendente y creativa. Escribe una frase intrigante para comenzar la historia y luego añade un
+                conector que motive a otros a continuarla.</p>
+        </section>
+
+
         <section id="colaboracion">
-            <h2>Texto Colaborativo</h2>
             <div id="texto-seleccionado"></div> <!-- Nueva sección para mostrar el texto seleccionado -->
             <p>Escribe una frase que inicie la historia:</p>
-            <textarea id="input-frase" placeholder="Escribe aquí..."></textarea>
+            <textarea id="input-frase" placeholder="Escribe aquí una historia..."></textarea>
             <p>Escribe el conector para continuar la historia:</p>
-            <textarea id="input-conector" placeholder="Escribe aquí el conector..."></textarea>
-            <button id="btn-enviar">Enviar</button>
+            <textarea id="input-conector"
+                placeholder="Escribe aquí el conector o un texto para que los demás continuen..."></textarea>
+            <br><button id="btn-enviar">Enviar</button>
             <div id="mosaico-textos">
                 <!-- Aquí se mostrarán los textos colaborativos en un mosaico -->
             </div>
@@ -35,9 +56,8 @@
     </main>
 
     <footer>
-        <p>© 2023 An Attic Corner. Todos los derechos reservados.</p>
+        <p>© 2023 An Attic Corner_ es una pagina en colaboración con ChatGPT.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
+
 </html>

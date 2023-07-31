@@ -1,0 +1,28 @@
+/* estilo.css */
+  #sidebar {
+    /* Estilos para la barra lateral que contiene el formulario de login y sign up */
+    padding: 1rem;
+    background-color: #f2f2f2;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  #sidebar h2 {
+    /* Estilos para los títulos de login y sign up */
+    margin-top: 1rem;
+  }
+  
+  #sidebar form {
+    /* Estilos para los formularios */
+    margin-bottom: 1rem;
+  }
+  
+  #sidebar label {
+    /* Estilos para las etiquetas de los campos del formulario */
+    display: block;
+    margin-bottom: 5px;
+  }
+  

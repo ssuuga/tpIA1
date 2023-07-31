@@ -1,3 +1,4 @@
+// script.js
 // Estructura de datos para almacenar los textos fijos y colaborativos
 let textos = [];
 let idTexto = 0;
@@ -8,9 +9,9 @@ let inputConector;
 let btnEnviar;
 let mosaicoTextos;
 let textoSeleccionado;
-let textoSeleccionadoId = null; // Agregamos una variable para guardar el ID del texto fijo seleccionado
-let colorConector = '#c51616'; // Color del conector, puedes cambiarlo por el color que desees
 
+// Paleta de colores
+const colores = ["#c19a6b", "#dbb18e", "#f1dca9", "#e5aa80", "#d9815a"];
 
 function setup() {
   inputFrase = select('#input-frase');
@@ -22,6 +23,8 @@ function setup() {
   btnEnviar.mousePressed(agregarTexto);
   selectTextosColaborativos();
 }
+
+let textoSeleccionadoId = null; // Agregamos una variable para guardar el ID del texto fijo seleccionado
 
 function agregarTexto() {
   const frase = inputFrase.value().trim();
@@ -43,12 +46,25 @@ function agregarTexto() {
 }
 
 function agregarTextoColaborativo(frase, conector) {
+  const color = obtenerColorAleatorio();
+  const grosor = obtenerGrosorAleatorio();
   const textoColaborativo = {
     id: idTexto++,
-    texto: frase + ' <span style="color:' + colorConector + ';">' + conector + '</span>'
+    texto: frase + ' ' + conector,
+    estilo: `color: ${color}; font-weight: ${grosor};`
   };
   textos.push(textoColaborativo);
   actualizarMosaico();
+}
+
+function obtenerColorAleatorio() {
+  const color = random(colores);
+  return color;
+}
+
+function obtenerGrosorAleatorio() {
+  const grosor = random(['normal', 'bold']);
+  return grosor;
 }
 
 function selectTextosColaborativos() {
@@ -72,6 +88,7 @@ function actualizarMosaico() {
   textos.forEach(texto => {
     const textoDiv = createDiv(texto.texto);
     textoDiv.class('texto-colaborativo');
+    textoDiv.attribute('style', texto.estilo); // Asignar estilo al texto colaborativo
     textoDiv.id(texto.id);
     mosaicoTextos.child(textoDiv);
   });

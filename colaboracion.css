@@ -1,35 +1,117 @@
 /* colaboracion.css */
+/* Estilos para el encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Fuentes */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  /* Cambia el color del texto a blanco */
+  background-image: url('fondo.gif');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1, nav {
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Estilos para títulos */
+h2,
+h3 {
+  font-weight: 600;
+  color: #fff;
+  /* Cambia el color del texto a blanco */
+}
+
+/* Estilos para enlaces */
+a {
+  text-decoration: none;
+  color: #fff;
+  /* Cambia el color del texto a blanco */
+  font-weight: bold;
+  position: relative;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  /* Cambia el color de la línea de abajo a blanco */
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* Estilos para los contenedores de texto */
+main {
+  background-color: rgba(0, 0, 0, 0.477);
+  /* Cambia los valores RGB y el valor alfa para ajustar la opacidad del fondo */
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/* Ajusta el color del texto en los contenedores de texto */
+main h2,
+main p {
+  color: #fff;
+  /* Cambia el color del texto a blanco */
+}
+#descripcion-juego {
+  /* Centramos el contenido horizontalmente */
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+  /* Cambiamos el color del texto a blanco */
+  color: #fff;
+  /* Ajustamos el tamaño máximo para que no ocupe todo el ancho */
+  max-width: 60%;
+  /* Damos un borde redondeado */
+  border-radius: 10px;
+}
+
+
 /* Estilo para el mosaico de textos colaborativos */
 #mosaico-textos {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .texto-colaborativo {
-  border: 1px solid #ccc;
+  border: 1px solid #291e1e;
   padding: 10px;
   margin: 5px;
   cursor: pointer;
+  white-space: pre-wrap; /* Permitir saltos de línea */
+  word-break: break-word; /* Romper palabras largas para ajustar al contenedor */
 }
 
 /* Estilo para el texto seleccionado en edición */
 #texto-seleccionado {
-  border: 1px solid #e68a8a;
-  padding: 10px;
+  border: 2px solid #000000;
+  padding: 0px;
   margin-bottom: 10px;
-  background-color: #ff9292; /* Cambiar el color de fondo para el texto seleccionado */
+  background-color: #e8820c88; /* Cambiar el color de fondo para el texto seleccionado */
 }
 
-/* Estilo para el conector */
-.conector {
-  color: #eb1d1d; /* Color del conector */
-  font-weight: bold; /* Opcional: resaltar el conector */
-  margin: 0 5px; /* Espacio alrededor del conector */
-}
-
-/* Estilo para los campos de entrada de texto */
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
+textarea {
+  width: 55%;
+  padding: 20px;
+  margin-bottom: 5px;
 }

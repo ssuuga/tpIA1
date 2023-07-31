@@ -1,28 +1,159 @@
-.playlist-row {
+/* Estilos para el encabezado */
+header {
     display: flex;
     justify-content: space-between;
-    max-width: 1150px;
-    margin: 0 auto;
+    align-items: center;
+    padding: 10px;
 }
 
-.playlist-row a {
-    display: inline-block;
-    padding: 10px 10px;
-    background-color: #3c3c3c;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.playlist-row a:hover {
-    background-color: #9b9b9b;
-}
+/* Fuentes */
 body {
     font-family: 'Poppins', sans-serif;
+    color: #fff;
+    /* Cambia el color del texto a blanco */
+    background-image: url('fondo.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-h1, h2, h3 {
+h1,
+nav {
+    font-family: 'Rubik', sans-serif;
+    /* Agrega una sombra de 2px en posición X y 1px en posición Y, con un desenfoque de 5px, y un color RGBA */
+    text-shadow: 3px 2px 0px rgb(0, 0, 0);
+
+}
+
+/* Estilos para títulos */
+h2,
+h3 {
+    font-weight: 600;
+    color: #fff;
+    /* Cambia el color del texto a blanco */
+}
+
+/* Estilos para enlaces */
+a {
+    text-decoration: none;
+    color: #fff;
+    /* Cambia el color del texto a blanco */
+    font-weight: bold;
+    position: relative;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    /* Cambia el color de la línea de abajo a blanco */
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+/* Estilos para los contenedores de texto */
+main {
+    background-color: rgba(0, 0, 0, 0.477);
+    /* Cambia los valores RGB y el valor alfa para ajustar la opacidad del fondo */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Ajusta el color del texto en los contenedores de texto */
+main h2,
+main p {
+    color: #fff;
+    /* Cambia el color del texto a blanco */
+}
+
+/* Estilos para los mosaicos de playlist */
+#mosaico-recomendaciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Cambia los valores RGB y el valor alfa para ajustar la opacidad del fondo */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Ajusta el color del texto en los mosaicos de playlist */
+.mosaico-item h3 {
+    color: #fff;
+    /* Cambia el color del texto a blanco */
+}
+
+/* Ajusta la disposición de las recomendaciones y el video */
+main {
+    display: flex;
+    justify-content: center;
+    /* Centrar el contenido horizontalmente */
+}
+
+#inicio {
+    max-width: 45%;
+    /* Ancho máximo del contenido de inicio */
+    padding-right: 50px;
+    /* Espaciado entre el video y el texto */
+}
+
+#recomendaciones {
+    max-width: 45%;
+    /* Ancho máximo del contenido de recomendaciones */
+    padding-left: 20px;
+    /* Espaciado entre el video y las recomendaciones */
+}
+
+#video-stream {
+    display: flex;
+    justify-content: center;
+    /* Centrar el video horizontalmente */
+}
+
+.recomendaciones-container {
+    background-color: rgba(125, 94, 61, 0.45);
+    /* Color de fondo para las recomendaciones */
+    padding: 20px;
+    border-radius: 20px;
+}
+
+/* Ajusta el estilo del footer */
+footer {
+    text-align: center;
+    /* Centra el contenido del footer horizontalmente */
+    padding: 5px 0;
+    /* Agrega un espacio en la parte superior e inferior del footer */
+
+    border-radius: 10px;
+    /* Otorga esquinas redondeadas al footer */
+    color: #fff;
+    /* Cambia el color del texto a blanco */
     font-family: 'Poppins', sans-serif;
-    font-weight: 600; /*'Poppins' en negrita */
+    /* Cambia la fuente del texto según tus preferencias */
+    position: absolute;
+    /* Asegura que el footer esté posicionado de forma absoluta */
+    bottom: 20px;
+    /* Ajusta la distancia desde la parte inferior de la ventana */
+    left: 50%;
+    /* Desplaza el footer hacia el centro horizontal */
+    transform: translateX(-50%);
+    /* Centra el footer horizontalmente */
+}
+
+/* Estilos para el juego de texto colaborativo */
+#colaboracion {
+    /* Centramos el contenido horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* Agregamos un margen para separar del contenido anterior */
+    margin-top: 20px;
 }
